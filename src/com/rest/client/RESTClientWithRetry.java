@@ -1,4 +1,4 @@
-package com.executor.service;
+package com.rest.client;
 
 import java.net.SocketTimeoutException;
 import javax.ws.rs.ProcessingException;
