@@ -12,12 +12,12 @@ import org.glassfish.jersey.client.ClientProperties;
 
 
 /**
- * The Class JerseyRestClient.
+ * The Class RESTClientWithRetry.
  */
 public class RESTClientWithRetry {
 
 	/** The instance. */
-	private static JerseyRestClient instance;
+	private static RESTClientWithRetry instance;
 
 	/** The client. */
 	private Client client;
@@ -25,7 +25,7 @@ public class RESTClientWithRetry {
 	/**
 	 * Instantiates a new jersey rest client.
 	 */
-	private JerseyRestClient() {	
+	private RESTClientWithRetry() {	
 		if(client == null) {
 			createClient();
 		}
@@ -45,8 +45,8 @@ public class RESTClientWithRetry {
 	 *
 	 * @return single instance of JerseyRestClient
 	 */
-	public static synchronized JerseyRestClient getInstance() {
-		return instance == null ? new JerseyRestClient() : instance;
+	public static synchronized RESTClientWithRetry getInstance() {
+		return instance == null ? new RESTClientWithRetry() : instance;
 	}
 
 	/**
