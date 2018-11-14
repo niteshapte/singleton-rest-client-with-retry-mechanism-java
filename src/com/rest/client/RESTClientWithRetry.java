@@ -41,9 +41,9 @@ public class RESTClientWithRetry {
 	}
 
 	/**
-	 * Gets the single instance of JerseyRestClient.
+	 * Gets the single instance of RESTClientWithRetry.
 	 *
-	 * @return single instance of JerseyRestClient
+	 * @return single instance of RESTClientWithRetry
 	 */
 	public static synchronized RESTClientWithRetry getInstance() {
 		return instance == null ? new RESTClientWithRetry() : instance;
